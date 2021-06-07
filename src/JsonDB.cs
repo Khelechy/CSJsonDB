@@ -127,7 +127,7 @@ namespace CSJsonDB
 			}
 		}
 
-		public static void update(this object data, string table, string key, dynamic value, object newData)
+		public static object update(this object data, string table, string key, dynamic value, object newData)
 		{
 			if (data != null)
 			{
@@ -149,6 +149,7 @@ namespace CSJsonDB
 					parsedData[table] = dataArray;
 					string newJsonResult = parsedData.ToString();
 					File.WriteAllText(jsonLocation, newJsonResult);
+					return x;
 				}
 				catch (Exception ex)
 				{
