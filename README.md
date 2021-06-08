@@ -47,3 +47,15 @@ Sample DB `users.db`
     ]
   }
   ```
+
+### Load the Sample DB
+
+```c#
+var db = JsonDB.load("filetosampledb/users.db");
+```
+
+## Available Methods 🧨
+
+>**NOTE**</br>
+>Response are returned as objects. You can use `.toJsonString()` method to return json string from a json object
+
