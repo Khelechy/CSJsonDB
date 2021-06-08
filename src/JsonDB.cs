@@ -76,8 +76,6 @@ namespace CSJsonDB
 		{
 			if (data != null)
 			{
-				//if (newData is { })
-				//	throw new Exception("Object you are trying to add is empty.");
 				try
 				{
 					var parsedData = JObject.Parse(data.ToString());
@@ -131,8 +129,6 @@ namespace CSJsonDB
 		{
 			if (data != null)
 			{
-				//if (newData is { })
-				//	throw new Exception("Object you are trying to add as an update is empty.");
 				try
 				{
 					var parsedData = JObject.Parse(data.ToString());
