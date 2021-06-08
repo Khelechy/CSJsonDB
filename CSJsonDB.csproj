@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>CSJsonDB</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Kelechi Onyekwere</Authors>
+    <Company>khelechy</Company>
   </PropertyGroup>
 
   <ItemGroup>

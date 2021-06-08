@@ -1,0 +1,12 @@
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\bin\Debug\net5.0\CSJsonDB.deps.json
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\bin\Debug\net5.0\CSJsonDB.dll
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\bin\Debug\net5.0\ref\CSJsonDB.dll
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\bin\Debug\net5.0\CSJsonDB.pdb
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\obj\Debug\net5.0\CSJsonDB.csprojAssemblyReference.cache
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\obj\Debug\net5.0\CSJsonDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\obj\Debug\net5.0\CSJsonDB.AssemblyInfoInputs.cache
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\obj\Debug\net5.0\CSJsonDB.AssemblyInfo.cs
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\obj\Debug\net5.0\CSJsonDB.csproj.CoreCompileInputs.cache
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\obj\Debug\net5.0\CSJsonDB.dll
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\obj\Debug\net5.0\ref\CSJsonDB.dll
+C:\Users\kelechi.onyekwere\source\repos\jsondblab\CSJsonDB\obj\Debug\net5.0\CSJsonDB.pdb
