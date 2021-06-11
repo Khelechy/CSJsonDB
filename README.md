@@ -16,7 +16,7 @@ Install via Package Manager
 Install-Package CSJsonDB --version 1.0.1
 ```
 
-Add the directive `using CSJsonDB;`
+### Add the directive `using CSJsonDB;`  `IMPORTANT`
 
 Sample DB `users.db`
 
