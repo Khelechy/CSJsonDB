@@ -51,13 +51,20 @@ Sample DB `users.db`
 ### Load the Sample DB `IMPORTANT`
 
 ```c#
-var db = JsonDB.load("filetosampledb/users.db");
+var db = JsonDB.load("filepathtosampledb/users.db");
 ```
 
 ## Available Methods 🧨
 
 >**NOTE**</br>
 >Responses are returned as objects. You can use `.toJsonString()` method to return json string from a json object
+
+### Load
+
+```c#
+var db = JsonDB.load(string filePath);
+```
+
 
 ### ToJsonString
 
