@@ -68,9 +68,9 @@ db.select(string table);
 #### Sample 
 ```c#
 db.select("users");
-
-
+```
 result:
+```json
 [
       {
         "id": 1,
@@ -93,5 +93,5 @@ result:
         "age": 20,
         "verified": false
       }
-    ]
+]
 ```
