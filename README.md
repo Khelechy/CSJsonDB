@@ -76,7 +76,7 @@ db.select(string table);
 ```c#
 db.select("users");
 ```
-result:
+result: `object`
 ```json
 [
       {
@@ -111,7 +111,7 @@ db.select(string table).where(string key, dynamic value);
 ```c#
 db.select("users").where("id", 2);
 ```
-result:
+result: `object`
 ```json
 [
       {
@@ -164,7 +164,7 @@ var updateUser = new {
 
 db.update("users", "id", 3, updateUser);
 ```
-result:
+result: `object`
 ```json
 [
       {
@@ -176,3 +176,8 @@ result:
       },
 ]
 ```
+
+
+## Contribution
+
+If you find an issue with this package or you have any suggestion please help out. I am not perfect.
