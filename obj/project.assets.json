@@ -52,7 +52,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.2",
     "restore": {
       "projectUniqueName": "C:\\Users\\kelechi.onyekwere\\source\\repos\\jsondblab\\CSJsonDB\\CSJsonDB.csproj",
       "projectName": "CSJsonDB",
