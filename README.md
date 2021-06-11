@@ -8,12 +8,12 @@ This is a simple C# package that performs basic CRUD ( Create, Read, Update, Del
 Install via .NET CLI
 
 ```bash
-dotnet add package CSJsonDB --version 1.0.0
+dotnet add package CSJsonDB --version 1.0.1
 ```
 Install via Package Manager
 
 ```bash
-Install-Package CSJsonDB --version 1.0.0
+Install-Package CSJsonDB --version 1.0.1
 ```
 
 Add the directive `using CSJsonDB;`
@@ -64,7 +64,7 @@ var db = JsonDB.load("filetosampledb/users.db");
 ```c#
 db.select("users").where("id", 2).toJsonString();
 ```
-reult: Returns the json string of the object.
+result: Returns the json string of the object.
 
 ### Select
 
