@@ -71,7 +71,7 @@ var db = JsonDB.load(string filePath);
 ```c#
 db.select("users").where("id", 2).toJsonString();
 ```
-result: Returns the json string of the object.
+result: `string` Returns the json string of the object.
 
 ### Select
 
