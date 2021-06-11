@@ -57,5 +57,41 @@ var db = JsonDB.load("filetosampledb/users.db");
 ## Available Methods 🧨
 
 >**NOTE**</br>
->Response are returned as objects. You can use `.toJsonString()` method to return json string from a json object
+>Responses are returned as objects. You can use `.toJsonString()` method to return json string from a json object
 
+### Select
+
+```c#
+db.select(string table);
+```
+
+#### Sample 
+```c#
+db.select("users");
+
+
+result:
+[
+      {
+        "id": 1,
+        "firstname": "kelechi",
+        "lastname": "onyekwere",
+        "age": 19,
+        "verified": true
+      },
+      {
+        "id": 2,
+        "firstname": "john",
+        "lastname": "doe",
+        "age": 33,
+        "verified": true
+      },
+      {
+        "id": 3,
+        "firstname": "mark",
+        "lastname": "parker",
+        "age": 20,
+        "verified": false
+      }
+    ]
+```
