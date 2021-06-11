@@ -8,12 +8,12 @@ This is a simple C# package that performs basic CRUD ( Create, Read, Update, Del
 Install via .NET CLI
 
 ```bash
-dotnet add package CSJsonDB --version 1.0.1
+dotnet add package CSJsonDB --version 1.0.2
 ```
 Install via Package Manager
 
 ```bash
-Install-Package CSJsonDB --version 1.0.1
+Install-Package CSJsonDB --version 1.0.2
 ```
 
 ### Add the namespace directive `using CSJsonDB;`  `IMPORTANT`
