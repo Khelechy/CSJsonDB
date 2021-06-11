@@ -48,7 +48,7 @@ Sample DB `users.db`
   }
   ```
 
-### Load the Sample DB
+### Load the Sample DB `IMPORTANT`
 
 ```c#
 var db = JsonDB.load("filetosampledb/users.db");
@@ -58,6 +58,13 @@ var db = JsonDB.load("filetosampledb/users.db");
 
 >**NOTE**</br>
 >Responses are returned as objects. You can use `.toJsonString()` method to return json string from a json object
+
+### ToJsonString
+
+```c#
+db.select("users").where("id", 2).toJsonString();
+```
+reult: Returns the json string of the object.
 
 ### Select
 
@@ -93,5 +100,79 @@ result:
         "age": 20,
         "verified": false
       }
+]
+```
+
+### Where
+```c#
+db.select(string table).where(string key, dynamic value);
+```
+#### Sample
+```c#
+db.select("users").where("id", 2);
+```
+result:
+```json
+[
+      {
+        "id": 2,
+        "firstname": "john",
+        "lastname": "doe",
+        "age": 33,
+        "verified": true
+      },
+]
+```
+
+### Add
+```c#
+db.add(string table, object newData);
+```
+#### Sample
+```c#
+var newUser = new {
+    id = 3,
+    firstname = matt,
+    lastname = doe,
+    age = 23,
+    verified = false
+};
+
+db.add("users", newUser);
+```
+result: void
+
+### Delete
+```c#
+db.delete(string table, string key, dynamic value);
+```
+#### Sample
+```c#
+db.delete("users", "id", 1);
+```
+result: void
+
+### Update
+```c#
+db.update(string table, string table, string key, dynamic value, object newData);
+```
+#### Sample
+```c#
+var updateUser = new {
+    verified = true
+};
+
+db.update("users", "id", 3, updateUser);
+```
+result:
+```json
+[
+      {
+        "id": 3,
+        "firstname": "mark",
+        "lastname": "parker",
+        "age": 20,
+        "verified": true
+      },
 ]
 ```
