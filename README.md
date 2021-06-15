@@ -51,7 +51,7 @@ Sample DB `users.db`
 ### Load the Sample DB `IMPORTANT`
 
 ```c#
-var db = JsonDB.load("filepathtosampledb/users.db");
+var db = JsonDB.Load("filepathtosampledb/users.db");
 ```
 
 ## Available Methods 🧨
@@ -62,26 +62,26 @@ var db = JsonDB.load("filepathtosampledb/users.db");
 ### Load
 
 ```c#
-var db = JsonDB.load(string filePath);
+var db = JsonDB.Load(string filePath);
 ```
 
 
 ### ToJsonString
 
 ```c#
-db.select("users").where("id", 2).toJsonString();
+db.Select("users").Where("id", 2).ToJsonString();
 ```
 result: `string` Returns the json string of the object.
 
 ### Select
 
 ```c#
-db.select(string table);
+db.Select(string table);
 ```
 
 #### Sample 
 ```c#
-db.select("users");
+db.Select("users");
 ```
 result: `object`
 ```json
@@ -112,11 +112,11 @@ result: `object`
 
 ### Where
 ```c#
-db.select(string table).where(string key, dynamic value);
+db.Select(string table).Where(string key, dynamic value);
 ```
 #### Sample
 ```c#
-db.select("users").where("id", 2);
+db.Select("users").Where("id", 2);
 ```
 result: `object`
 ```json
@@ -133,7 +133,7 @@ result: `object`
 
 ### Add
 ```c#
-db.add(string table, object newData);
+db.Add(string table, object newData);
 ```
 #### Sample
 ```c#
@@ -145,23 +145,23 @@ var newUser = new {
     verified = false
 };
 
-db.add("users", newUser);
+db.Add("users", newUser);
 ```
 result: void
 
 ### Delete
 ```c#
-db.delete(string table, string key, dynamic value);
+db.Delete(string table, string key, dynamic value);
 ```
 #### Sample
 ```c#
-db.delete("users", "id", 1);
+db.Delete("users", "id", 1);
 ```
 result: void
 
 ### Update
 ```c#
-db.update(string table, string table, string key, dynamic value, object newData);
+db.Update(string table, string table, string key, dynamic value, object newData);
 ```
 #### Sample
 ```c#
@@ -169,7 +169,7 @@ var updateUser = new {
     verified = true
 };
 
-db.update("users", "id", 3, updateUser);
+db.Update("users", "id", 3, updateUser);
 ```
 result: `object`
 ```json
