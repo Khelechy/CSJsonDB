@@ -15,7 +15,7 @@ namespace CSJsonDB
 		public static string jsonLocation;
 		private static JObject _dbObject;
 
-		public static JObject load(string filePathLoaded)
+		public static JObject Load(string filePathLoaded)
 		{
 			if (!File.Exists(filePathLoaded))
 				throw new Exception("File does not exist, please check file or file path");
@@ -31,7 +31,7 @@ namespace CSJsonDB
 			}
 		}
 
-		public static object select(this object data, string table = "")
+		public static object Select(this object data, string table = "")
 		{
 
 			if (data != null)
@@ -53,11 +53,11 @@ namespace CSJsonDB
 			}
 		}
 
-		public static object where(this object data, string key = "", dynamic value = null)
+		public static object Where(this object data, string key = "", dynamic value = null)
 		{
 			if (data != null)
 			{
-				var dataArray = data.toDataList();
+				var dataArray = data.ToDataList();
 				var newDataArray = new List<object>();
 				foreach (var singleData in dataArray.Where(x => x[key] as dynamic == value))
 				{
@@ -72,7 +72,7 @@ namespace CSJsonDB
 
 		}
 
-		public static void add(this object data, string table, object newData)
+		public static void Add(this object data, string table, object newData)
 		{
 			if (data != null)
 			{
@@ -80,7 +80,7 @@ namespace CSJsonDB
 				{
 					var parsedData = JObject.Parse(data.ToString());
 					var result = string.IsNullOrEmpty(table) ? (object)parsedData : (object)parsedData[table];
-					var dataArray = result.toDataList();
+					var dataArray = result.ToDataList();
 					dataArray.Add(JObject.Parse(JsonConvert.SerializeObject(newData, Formatting.Indented)));
 					parsedData[table] = dataArray;
 					string newJsonResult = parsedData.ToString();
@@ -97,7 +97,7 @@ namespace CSJsonDB
 			}
 		}
 
-		public static void delete(this object data, string table, string key, dynamic value)
+		public static void Delete(this object data, string table, string key, dynamic value)
 		{
 			if (data != null)
 			{
@@ -105,7 +105,7 @@ namespace CSJsonDB
 				{
 					var parsedData = JObject.Parse(data.ToString());
 					var result = (object)parsedData[table];
-					var dataArray = result.toDataList();
+					var dataArray = result.ToDataList();
 					var itemToBeDeleted = dataArray.FirstOrDefault(x => x[key] as dynamic == value);
 					if (itemToBeDeleted == null)
 						throw new Exception("There are no objects with key: " + key + " , Please check key again");
@@ -125,7 +125,7 @@ namespace CSJsonDB
 			}
 		}
 
-		public static object update(this object data, string table, string key, dynamic value, object newData)
+		public static object Update(this object data, string table, string key, dynamic value, object newData)
 		{
 			if (data != null)
 			{
@@ -133,7 +133,7 @@ namespace CSJsonDB
 				{
 					var parsedData = JObject.Parse(data.ToString());
 					var result = (object)parsedData[table];
-					var dataArray = result.toDataList();
+					var dataArray = result.ToDataList();
 					var x = dataArray.FirstOrDefault(x => x[key] as dynamic == value);
 					if (x == null)
 						throw new Exception("There are no objects with key: " + key + " , Please check key again");
@@ -158,7 +158,7 @@ namespace CSJsonDB
 			}
 		}
 
-		public static string toJsonString(this object data)
+		public static string ToJsonString(this object data)
 		{
 			if(data != null)
 			{

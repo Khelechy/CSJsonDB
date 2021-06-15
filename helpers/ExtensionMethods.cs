@@ -9,7 +9,7 @@ namespace CSJsonDB.helpers
 {
 	public static class ExtensionMethods
 	{
-		public static JArray toDataList(this object data)
+		public static JArray ToDataList(this object data)
 		{
 			if (data != null)
 			{
