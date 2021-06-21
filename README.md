@@ -57,7 +57,7 @@ var db = JsonDB.Load("filepathtosampledb/users.db");
 ## Available Methods 🧨
 
 >**NOTE**</br>
->Responses are returned as objects. You can use `.toJsonString()` method to return json string from a json object
+>Responses are returned as objects. You can use `.ToJsonString()` method to return json string from a json object
 
 ### Load
 
@@ -118,7 +118,7 @@ db.Select(string table).Where(string key, dynamic value);
 ```c#
 db.Select("users").Where("id", 2);
 ```
-result: `object`
+result: `List<dynamic>`
 ```json
 [
       {
@@ -161,7 +161,7 @@ result: void
 
 ### Update
 ```c#
-db.Update(string table, string table, string key, dynamic value, object newData);
+db.Update(string table, string key, dynamic value, object newData);
 ```
 #### Sample
 ```c#
