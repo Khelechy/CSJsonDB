@@ -53,12 +53,12 @@ namespace CSJsonDB
 			}
 		}
 
-		public static object Where(this object data, string key = "", dynamic value = null)
+		public static List<dynamic> Where(this object data, string key = "", dynamic value = null)
 		{
 			if (data != null)
 			{
 				var dataArray = data.ToDataList();
-				var newDataArray = new List<object>();
+				var newDataArray = new List<dynamic>();
 				foreach (var singleData in dataArray.Where(x => x[key] as dynamic == value))
 				{
 					newDataArray.Add(singleData);
