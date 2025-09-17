@@ -169,5 +169,35 @@ namespace CSJsonDB
 				throw new Exception("The preloaded data is null");
 			}
 		}
+
+		/// <summary>
+		/// Gets the next available ID for a specified table and ID field
+		/// </summary>
+		/// <param name="table">The table name to search</param>
+		/// <param name="idField">The ID field name (default: "id")</param>
+		/// <returns>The next available ID</returns>
+		public static int GetNextId(string table, string idField = "id")
+		{
+		    if (_dbObject == null)
+		        throw new Exception("Database not loaded. Call Load() first.");
+		
+		    var tableArray = _dbObject[table] as JArray;
+		    if (tableArray == null)
+		        return 1; // Return 1 if table doesn't exist or is empty
+		
+		    int maxId = 0;
+		
+		    foreach (var item in tableArray)
+		    {
+		        if (item[idField] != null && item[idField].Type == JTokenType.Integer)
+		        {
+		            int currentId = item[idField].Value<int>();
+		            if (currentId > maxId)
+		                maxId = currentId;
+		        }
+		    }
+		
+		    return maxId + 1;
+		}
     }
 }
